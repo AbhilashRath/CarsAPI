@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "8a1c42e0-3e1b-4fad-8908-7700c8ded21b",
+		"name": "API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Cars",
+			"item": [
+				{
+					"name": "Get all Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cars with Seating Capacity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/seatingCapacity/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"seatingCapacity",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cars with Model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/model/SUV",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"model",
+								"SUV"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cars with Booking Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/isBooked/false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"isBooked",
+								"false"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cars with Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/cars/MH08216",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"MH08216"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d58eddb7-a653-4bf0-bf4e-280376b66087",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6262edad-cb3e-4067-a1ad-736064847a7b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "POST Cars",
+			"item": [
+				{
+					"name": "Add XUV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleNumber\": \"MH03612\",\n    \"model\": \"XUV\",\n    \"seatingCapacity\": 4,\n    \"rentPerDay\": 6000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"add"
+							]
+						},
+						"description": "This request is made to add XUV Car to DB."
+					},
+					"response": []
+				},
+				{
+					"name": "Add SUV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleNumber\": \"MH08216\",\n    \"model\": \"SUV\",\n    \"seatingCapacity\": 6,\n    \"rentPerDay\": 8000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"add"
+							]
+						},
+						"description": "Add SUV to the DB"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Luxury",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleNumber\": \"MH05672\",\n    \"model\": \"Luxury\",\n    \"seatingCapacity\": 4,\n    \"rentPerDay\": 20000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"add"
+							]
+						},
+						"description": "Add Luxury car to DB"
+					},
+					"response": []
+				},
+				{
+					"name": "Add 4-seater",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleNumber\": \"MH08372\",\n    \"model\": \"4-seater\",\n    \"seatingCapacity\": 4,\n    \"rentPerDay\": 4000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"add"
+							]
+						},
+						"description": "Add 4-seater to db"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "909c8520-6e49-49ee-af32-c42a342cfa8e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "515aab40-ac2d-4ab2-ab0f-f55bf3684020",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "POST Bookings",
+			"item": [
+				{
+					"name": "Book SUV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Abhilash Rath\",\n\t\"phoneNumber\":\"7861234590\",\n\t\"vehicleNumber\":\"MH08216\",\n\t\"issueDate\": \"5/23/2020\",\n\t\"returnDate\": \"5/26/2020\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/bookings/bookCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								"bookCar"
+							]
+						},
+						"description": "Booking SUV"
+					},
+					"response": []
+				},
+				{
+					"name": "Book same SUV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Arjun Reddy\",\n\t\"phoneNumber\":\"7864312590\",\n\t\"vehicleNumber\":\"MH08216\",\n\t\"issueDate\": \"6/28/2020\",\n\t\"returnDate\": \"7/3/2020\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/bookings/bookCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								"bookCar"
+							]
+						},
+						"description": "Booking same SUV"
+					},
+					"response": []
+				},
+				{
+					"name": "Book XUV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Ramesh Sippy\",\n\t\"phoneNumber\":\"4573412672\",\n\t\"vehicleNumber\":\"MH03612\",\n\t\"issueDate\": \"5/23/2020\",\n\t\"returnDate\": \"5/26/2020\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/bookings/bookCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								"bookCar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Car not present",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Ramesh Sippy\",\n\t\"phoneNumber\":\"4573412672\",\n\t\"vehicleNumber\":\"MH05231\",\n\t\"issueDate\": \"5/23/2020\",\n\t\"returnDate\": \"5/26/2020\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:2000/bookings/bookCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								"bookCar"
+							]
+						},
+						"description": "Book Car which is not present"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET Bookings",
+			"item": [
+				{
+					"name": "Get all Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/bookings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/bookings/MH03612",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								"MH03612"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/bookings/name/Abhilash Rath",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"bookings",
+								"name",
+								"Abhilash Rath"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UPDATE/DELETE Car",
+			"item": [
+				{
+					"name": "Update Car",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"rentPerDay\": 22000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:2000/cars/updateCar/MH05672",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"cars",
+								"updateCar",
+								"MH05672"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
